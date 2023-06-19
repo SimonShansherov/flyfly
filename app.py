@@ -1,5 +1,8 @@
 import controller_view as cv
 
 if __name__ == '__main__':
-    app = cv.App()
-    app.run()
+    try:
+        app = cv.App()
+        app.run()
+    except BaseException as e:
+        input(e)

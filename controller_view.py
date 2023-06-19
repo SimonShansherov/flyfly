@@ -1,6 +1,10 @@
 from tkinter import *
 from tkinter import ttk
 import model as m
+import os
+
+absFilePath = os.path.abspath(__file__)
+path, filename = os.path.split(absFilePath)
 
 
 def info_table(frame_name, data):
@@ -23,7 +27,7 @@ class App():
         self.root = Tk()
         self.root.title('Find my air-track')
         self.root.geometry('1000x700')
-        self.root.iconbitmap("airplain_icon.ico")
+        self.root.iconbitmap(path + "/airplain_icon.ico")
         self.root.resizable(width=False, height=False)
 
     def clicked(self):
